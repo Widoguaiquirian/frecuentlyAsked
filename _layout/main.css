@@ -1,0 +1,138 @@
+/* Created XX April XXXX
+Last update April XX:  */
+
+:root {
+  --zI-1: 1;
+  --zI-2: 2;
+  --zI-3: 3;
+  --zI-4: 4;
+  --zI-5: 5;
+
+  /* --z-nav: var(--zI-2); 100 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*--- General ---*/
+
+html {
+  font-size: 62.5%;
+  background-color: #f0f0f0;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(46, 46, 46);
+  font-size: 1.6rem;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-container {
+  width: 600px;
+  margin: 2rem auto;
+}
+
+.faq {
+  border: 1px solid #9f9f9f;
+  background-color: transparent;
+  border-radius: 10px;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  transition: 1s ease;
+}
+
+.faq.active {
+  background-color: white;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.241);
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  position: absolute;
+  color: #2ecc71;
+  font-size: 10rem;
+  top: 5px;
+  left: 25px;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.faq.active::after {
+  transform: rotateY(180deg);
+  color: royalblue;
+  top: -20px;
+  left: -3rem;
+}
+
+.faq-title {
+  margin: 0 3.5rem 0 0;
+}
+
+.faq-text {
+  margin: 3rem 0 0;
+  display: none;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  padding: 0;
+  outline: none;
+  top: 20px;
+  right: 30px;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9f9f9f;
+  border-radius: 50%;
+  color: white;
+}
