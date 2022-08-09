@@ -1,7 +1,7 @@
 'use strict';
 // ! *********** FOR LESSONS NAMES *********** //
 // ? *********** FOR REGULAR COMMENTS *********** //
-const buttons = document.querySelectorAll('.faq-toggle');
+const buttons = document.querySelectorAll('.btn-toggle');
 
 buttons.forEach(function (button) {
   button.addEventListener('click', function () {
